@@ -67,7 +67,13 @@ select c.celeb_fname, f.father_name from celebrity c left join father f on c.fat
 
 select a.award_name, count(c.celeb_fname) as awards from celebrity c inner join award a on c.celeb_id = a.celeb_id group by a.award_name ;
 
+delimiter //
+CREATE PROCEDURE award_view()
+BEGIN
+	SELECT * FROM award;
+END //
 
+call celebrity_view;
 
 
 select * from father;
