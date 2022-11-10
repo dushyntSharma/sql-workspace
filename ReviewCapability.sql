@@ -80,7 +80,7 @@ select * from father;
 select * from celebrity;
 select * from award;
 
-
+delete from tableName;
 
 
 
